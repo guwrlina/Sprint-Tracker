@@ -104,7 +104,7 @@ function editSprint(button) {
 
 function deleteSprint(button) {
     const password = prompt('Enter password to delete this entry:');
-    if (password === 'admin123') { // Replace with secure password logic
+    if (password === 'glp') { // Replace with secure password logic
         button.closest('tr').remove();
     } else {
         alert('Incorrect password!');
