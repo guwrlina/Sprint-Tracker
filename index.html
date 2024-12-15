@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint Planner | GLP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Sprint Planner</h1>
+    </header>
+
+    <div class="container">
+        <!-- Sprint Creation Section -->
+        <div class="card">
+            <h2>Create Sprint & Add Story</h2>
+            <input type="text" id="username" placeholder="Enter Username" required />
+            <input type="text" id="project-title" placeholder="Project Title" required />
+            <input type="date" id="start-date" required />
+            <input type="date" id="end-date" required />
+            <input type="text" id="task" placeholder="Task (Story Name)" required />
+            <textarea id="task-description" placeholder="Task Description"></textarea>
+            <button id="save-sprint-btn">Save Sprint Data</button>
+        </div>
+
+        <!-- Remarks Section (including Sprint History) -->
+        <div class="card">
+            <h2>Sprint History & Remarks</h2>
+            <h3>Sprint History</h3>
+            <table id="sprint-history">
+                <thead>
+                    <tr>
+                        <th>Sprint ID</th>
+                        <th>Username</th>
+                        <th>Project Title</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Task (Story Name)</th>
+                        <th>Task Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="sprint-history-body">
+                    <!-- Sprint data will be dynamically appended here -->
+                </tbody>
+            </table>
+
+            <h3>Remarks</h3>
+            <input type="number" id="remarks-sprint-id" placeholder="Enter Sprint ID" required />
+            <select id="remarks-status">
+                <option value="Completed">Completed</option>
+                <option value="Terminated">Terminated</option>
+            </select>
+            <textarea id="remarks-feedback" placeholder="Enter Feedback"></textarea>
+            <button id="save-remarks-btn">Save Remarks</button>
+
+            <h3>Remarks History</h3>
+            <table id="remarks-history">
+                <thead>
+                    <tr>
+                        <th>Sprint ID</th>
+                        <th>Remarks</th>
+                        <th>Feedback</th>
+                    </tr>
+                </thead>
+                <tbody id="remarks-history-body">
+                    <!-- Remarks data will be dynamically appended here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Sprint Planner</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
